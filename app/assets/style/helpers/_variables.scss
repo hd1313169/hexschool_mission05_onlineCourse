@@ -266,9 +266,12 @@ $spacers: (
   9: $spacer * 4,
   10: $spacer * 4.5,
   11: $spacer * 5,
+  18: $spacer * 1.125,
   20: $spacer * 1.25,
   36: $spacer * 2.25,
   84: $spacer * 5.25,
+  216: $spacer * 13.5,
+
 
 
 ) !default;
@@ -391,6 +394,9 @@ $border-radius:               .25rem !default;
 $border-radius-sm:            .2rem !default;
 $border-radius-lg:            .3rem !default;
 $border-radius-pill:          50rem !default;
+$border-radius-8:           .5rem !default;
+$border-radius-12:          .75rem !default;
+$border-radius-24:          1.5rem !default;
 // scss-docs-end border-radius-variables
 
 // scss-docs-start box-shadow-variables

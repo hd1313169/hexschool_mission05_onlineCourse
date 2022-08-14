@@ -1,3 +1,14 @@
+.rounded-8{
+  border-radius: 8px;
+}
+.rounded-12{
+  border-radius: 12px;
+}
+
+.rounded-24{
+  border-radius: 24px;
+}
+
 .navbar:before{
   content:"";
   display: block;
@@ -162,13 +173,17 @@ h1 span{
       background-color: #1C1C1C;
 }
 
-.rounded-12{
-  border-radius: 12px;
+.lessonType{
+
+  span{
+
+    &:hover{
+      background-color: #62DB54;
+      color: #2d2d2d;
+    }
+  }
 }
 
-.rounded-24{
-  border-radius: 24px;
-}
 
 .hotLesson{
   
@@ -178,7 +193,7 @@ h1 span{
     &:hover{
       background-color: #1C1C1C;
       border: 2px solid #62DB54;
-      border-radius: 12px;
+      border-radius: 24px;
     }
   }
   img{
@@ -188,4 +203,121 @@ h1 span{
     display: block;
     margin: 0 auto;
   }
+}
+
+.lessonInfo{
+
+  h3{
+    position: relative;
+    &:after{
+        display: inline-block;
+        position: absolute;
+        content:"";
+        background-color: #62DB54;
+        width: 50px;
+        height: 3px;
+        left: 0;
+        bottom: -16px;
+      }
+  
+    }
+    &-bg1, &-bg2, &-bg3, &-bg4{
+      width: 25%;
+      min-height: 615px;
+      background-size: cover;
+      background-position: center center;
+      filter: brightness(.6);
+    }
+
+    div:hover{
+      filter: brightness(.8);
+    }
+
+    &-bg1{
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info01.jpg?raw=true);
+    }
+    &-bg2{
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info02.jpg?raw=true);
+    }
+    &-bg3{
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info03.jpg?raw=true);
+    }
+    &-bg4{
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info04.jpg?raw=true);
+    }
+
+}
+
+.articleIndex{
+
+  h2{
+    position: relative;
+
+    &:after{
+      position: absolute;
+      display: inline-block;
+      content:"";
+      background-color: #62DB54;
+      width: 50px;
+      height: 3px;
+      left: 50%;
+      bottom: -16px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .col{
+    position: relative;
+  }
+  .col:before{
+    position: absolute;
+    display: inline-block;
+    content:"";
+    background-color: #1C1C1C;
+    width: calc( 100% - 64px );
+    height: 5px;
+    left: 50%;
+    bottom: -5px;
+    transform: translate(-50%, -50%);
+  }
+  .col:after{
+    position: absolute;
+    display: inline-block;
+    content:"";
+    background-color: #1C1C1C;
+    width: calc( 100% - 64px );
+    height: 5px;
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, -50%);
+  }
+  .decoration:before{
+    position: absolute;
+    display: inline-block;
+    content:"";
+    background-color: #1C1C1C;
+    height: calc( 100% - 64px );
+    width: 5px;
+    left: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .decoration:after{
+    position: absolute;
+    display: inline-block;
+    content:"";
+    background-color: #1C1C1C;
+    height: calc( 100% - 64px );
+    width: 5px;
+    right: -5px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  .col:hover{
+    border: 1px solid #62DB54;
+    border-radius: 12px;
+  }
+
 }
