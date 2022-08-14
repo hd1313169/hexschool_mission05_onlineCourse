@@ -1,5 +1,191 @@
-.index__h1 {
-  color:#00cc99;
-  font-size: 20px;
-  font-weight: 400;
+.navbar:before{
+  content:"";
+  display: block;
+  position: absolute;
+  background-color: #62DB54;
+  width: 50%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+}
+
+.navbar:after{
+  content:"";
+  display: block;
+  position: absolute;
+  background-color: #09ACF5;
+  width: 50%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+}
+
+
+.center{
+  position: relative;
+}
+
+.bgHome-content{
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &:before{
+    display: inline-block;
+    position: absolute;
+    content:"";
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    left: -5px;
+    top: -5px;
+  }
+
+  &:after{
+    display: inline-block;
+    position: absolute;
+    content:"";
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    right: -5px;
+    top: -5px;
+  }
+}
+.t-gradient{
+  background: linear-gradient( #09ACF5 0%, #62DB54 50%);
+  background-clip: text;
+  color: transparent;
+}
+
+.b-gradient{
+  background: linear-gradient( 90deg, #09ACF5 0%, #62DB54 50%);
+}
+
+
+
+h1 span{
+  display: block;
+}
+
+.decoration-bottom:before{
+  display: inline-block;
+  position: absolute;
+  content:"";
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  left: -5px;
+  bottom: -5px;
+}
+.decoration-bottom:after{
+  display: inline-block;
+  position: absolute;
+  content:"";
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  right: -5px;
+  bottom: -5px;
+}
+
+.intro{
+  height: 489px;
+.col{
+  h2{
+    position: relative;
+
+    &:after{
+      display: inline-block;
+      position: absolute;
+      content:"";
+      background-color: #62DB54;
+      width: 50px;
+      height: 3px;
+      left: 0;
+      bottom: -16px;
+    }
+  }
+}
+}
+
+.feature:hover{
+    background-color: #1C1C1C;
+    border: 1px solid #62DB54;
+    border-radius: 12px;
+
+    span{
+      background: linear-gradient( #09ACF5 0%, #62DB54 50%);
+      background-clip: text;
+      color: transparent;
+    }
+}
+
+.schedule, .lessonType, .hotLesson{
+
+  h2{
+    position: relative;
+
+    &:after{
+      position: absolute;
+      display: inline-block;
+      content:"";
+      background-color: #62DB54;
+      width: 50px;
+      height: 3px;
+      left: 50%;
+      bottom: -16px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .step{
+    position: relative;
+    width: 306px;
+    border-radius: 12px;
+  }
+}
+
+.step-number{
+      position: absolute;
+      left: 48px;
+      top: -32px;
+      width: 78px;
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+      color: #62DB54;
+      background-color: #1C1C1C;
+}
+
+.rounded-12{
+  border-radius: 12px;
+}
+
+.rounded-24{
+  border-radius: 24px;
+}
+
+.hotLesson{
+  
+  .card{
+    min-height: 564px;
+
+    &:hover{
+      background-color: #1C1C1C;
+      border: 2px solid #62DB54;
+      border-radius: 12px;
+    }
+  }
+  img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
 }
