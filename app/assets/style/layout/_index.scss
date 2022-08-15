@@ -176,8 +176,12 @@ h1 span{
 .lessonType{
 
   ul{
-    overflow: hidden;
+    overflow: auto;
     list-style:none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
   }
 
@@ -355,4 +359,81 @@ h1 span{
     border-radius: 12px;
   }
 
+}
+
+.studentReview{
+  width: 100%;
+  min-height: 733px;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_share.jpg?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+ 
+  position: relative;
+
+  h2{
+    position: relative;
+
+    &:after{
+      position: absolute;
+      display: inline-block;
+      content:"";
+      background-color: #62DB54;
+      width: 50px;
+      height: 3px;
+      left: 50%;
+      bottom: -16px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-img-bd{
+    width: 525px;
+    height: 318px;
+    position: absolute;
+    top: 234px;
+    left: 181px;
+  }
+
+  &-img{
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/share.jpg?raw=true);
+    width: 525px;
+    height: 318px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+  }
+
+  &-content{
+    width: 416px;
+    border-radius: 24px 24px 24px 0px;
+    position: absolute;
+    left: 509px;
+    top: 241px;
+  }
+
+  &-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    right: 32px;
+
+  }
+
+}
+
+.joinUs{
+  width: 76%;
+  margin: 0 auto;
+   a{
+    color: #fff;
+   
+    &:hover{
+      background-color: #62DB54;
+      color: #2d2d2d;
+    }
+  }
 }
