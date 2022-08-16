@@ -16317,6 +16317,15 @@ fieldset:disabled .btn {
   position: relative;
 }
 
+.bgHome {
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_home.jpg?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 535px;
+}
+
 .bgHome-content {
   max-width: 50%;
   margin: 0 auto;
