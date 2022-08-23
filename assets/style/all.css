@@ -18076,6 +18076,7 @@ fieldset:disabled .btn {
 }
 
 h2, .h2 {
+  color: white;
   position: relative;
 }
 
@@ -18104,20 +18105,6 @@ h2, .h2 {
   background: -webkit-gradient(linear, left top, right top, from(#09ACF5), color-stop(50%, #62DB54));
   background: -o-linear-gradient(left, #09ACF5 0%, #62DB54 50%);
   background: linear-gradient(90deg, #09ACF5 0%, #62DB54 50%);
-}
-
-.title:after {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  background-color: #62DB54;
-  width: 50px;
-  height: 3px;
-  left: 50%;
-  bottom: -16px;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 h1, .h1 {
@@ -18162,21 +18149,10 @@ h1, .h1 {
   bottom: 0;
 }
 
-.banner {
-  padding: 47px 80px;
-  border: 1px solid #fff;
-}
-
-.square {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-}
-
 .banner-bg {
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_home_mobile.jpg?raw=true);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   width: 100%;
   padding: 84px 0;
@@ -18222,35 +18198,54 @@ h1, .h1 {
   }
 }
 
-.decoration-bottom:before {
-  display: inline-block;
-  position: absolute;
-  content: "";
+.banner {
+  padding: 47px 80px;
+  border: 1px solid #fff;
+}
+
+.square {
   width: 10px;
   height: 10px;
   background-color: #fff;
-  left: -5px;
-  bottom: -5px;
 }
 
-.decoration-bottom:after {
+.intro-title {
+  text-align: center;
+}
+
+.intro-title:after {
   display: inline-block;
   position: absolute;
   content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  right: -5px;
-  bottom: -5px;
+  background-color: #62DB54;
+  width: 50px;
+  height: 3px;
+  left: 50%;
+  bottom: -16px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.feature:hover {
-  background-color: #1C1C1C;
-  border: 1px solid #62DB54;
-  border-radius: 12px;
+@media (min-width: 992px) {
+  .intro-title {
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+  .intro-title:after {
+    left: 0;
+    -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
 }
 
-.feature:hover span {
+.intro-content {
+  border: 1px solid #202020;
+  background: #202020;
+}
+
+.intro-content span {
   background: -webkit-gradient(linear, left top, left bottom, from(#09ACF5), color-stop(50%, #62DB54));
   background: -o-linear-gradient(#09ACF5 0%, #62DB54 50%);
   background: linear-gradient(#09ACF5 0%, #62DB54 50%);
@@ -18259,9 +18254,53 @@ h1, .h1 {
   color: transparent;
 }
 
-.schedule .step, .lessonType .step, .hotLesson .step {
+@media (min-width: 768px) {
+  .intro-content {
+    background: #2D2D2D;
+    border: 1px solid #2D2D2D;
+  }
+  .intro-content span {
+    color: #C1C1C1;
+  }
+  .intro-content:hover {
+    background-color: #202020;
+    border: 1px solid #62DB54;
+    border-radius: 12px;
+  }
+  .intro-content:hover h3, .intro-content:hover .h3 {
+    color: white;
+  }
+  .intro-content:hover span {
+    background: -webkit-gradient(linear, left top, left bottom, from(#09ACF5), color-stop(50%, #62DB54));
+    background: -o-linear-gradient(#09ACF5 0%, #62DB54 50%);
+    background: linear-gradient(#09ACF5 0%, #62DB54 50%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
+}
+
+.title {
+  text-align: center;
+  color: white;
+}
+
+.title:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  background-color: #62DB54;
+  width: 50px;
+  height: 3px;
+  left: 50%;
+  bottom: -16px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.step {
   position: relative;
-  width: 306px;
   border-radius: 12px;
 }
 
@@ -18275,6 +18314,7 @@ h1, .h1 {
   font-weight: bold;
   color: #62DB54;
   background-color: #1C1C1C;
+  font-family: "Azeret Mono";
 }
 
 .lessonType ul {
@@ -18288,7 +18328,6 @@ h1, .h1 {
 
 .lessonType li:hover {
   background-color: #62DB54;
-  color: #2d2d2d;
 }
 
 .hotLesson .card {
