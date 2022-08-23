@@ -1,45 +1,38 @@
+
+
 .font-azeret{
   font-family: "Azeret Mono";
 }
 
 h2{
+  color: white;
   position: relative;
 }
 
+// 圓角矩形
 .rounded-8{
   border-radius: 8px;
 }
 .rounded-12{
   border-radius: 12px;
 }
-
 .rounded-24{
   border-radius: 24px;
 }
 
+// 漸層字
 .gradient-text{
   background-image: linear-gradient(180deg, #62DB54, #09ACF5);
   background-clip: text;
   color: transparent;
 }
 
+// 漸層背景
 .b-gradient{
   background: linear-gradient( 90deg, #09ACF5 0%, #62DB54 50%);
 }
 
-.title:after{
-    display: inline-block;
-    position: absolute;
-    content:"";
-    background-color: #62DB54;
-    width: 50px;
-    height: 3px;
-    left: 50%;
-    bottom: -16px;
-    transform: translate(-50%, -50%);
-
-}
-
+// 商標
 h1{
   background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a42e625b3e98d0fe8ffa5f9f58096fb8326aa845/week6-202207/logo2.svg);
   background-repeat: no-repeat;
@@ -59,7 +52,10 @@ h1{
     height: 42px;
   }
 }
+// 商標END
 
+
+// 導覽列下面那條線
 .navbar:before{
   content:"";
   display: block;
@@ -70,7 +66,6 @@ h1{
   left: 0;
   bottom: 0;
 }
-
 .navbar:after{
   content:"";
   display: block;
@@ -81,23 +76,14 @@ h1{
   right: 0;
   bottom: 0;
 }
+// 導覽列下面那條線END
 
-
-.banner {
-  padding: 47px 80px;
-  border: 1px solid #fff;
-}
-
-.square {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-}
-
+// 橫幅廣告
+  // 背景圖片
 .banner-bg{
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_home_mobile.jpg?raw=true);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   width: 100%;
   padding: 84px 0;
@@ -136,7 +122,6 @@ h1{
 }
 
 @media (min-width: 768px){
-
   .banner-bg{
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_home.jpg?raw=true);
     background-repeat: no-repeat;
@@ -146,52 +131,109 @@ h1{
     padding: 216px 0;
   }
 }
+  // 有裝飾的框框
+  .banner {
+    padding: 47px 80px;
+    border: 1px solid #fff;
+  }
+  .square {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+  }
+  
+// 橫幅廣告END
 
+// 服務介紹
+  // 服務介紹標題
+.intro-title{
+  text-align: center;
 
-
-.decoration-bottom:before{
-  display: inline-block;
-  position: absolute;
-  content:"";
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  left: -5px;
-  bottom: -5px;
+  &:after{
+    display: inline-block;
+    position: absolute;
+    content:"";
+    background-color: #62DB54;
+    width: 50px;
+    height: 3px;
+    left: 50%;
+    bottom: -16px;
+    transform: translate(-50%, -50%);
+  }
 }
-.decoration-bottom:after{
-  display: inline-block;
-  position: absolute;
-  content:"";
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  right: -5px;
-  bottom: -5px;
-}
-
-.feature:hover{
-    background-color: #1C1C1C;
-    border: 1px solid #62DB54;
-    border-radius: 12px;
-
-    span{
-      background: linear-gradient( #09ACF5 0%, #62DB54 50%);
-      background-clip: text;
-      color: transparent;
+@media (min-width: 992px){
+  .intro-title{
+    text-align-last: left;
+    &:after{
+      left: 0;
+      transform: translate(0%, 0%);
     }
+  }
 }
+  // 服務介紹內容
+.intro-content{
+  border: 1px solid #202020;
+  background: #202020;
 
-.schedule, .lessonType, .hotLesson{
-
-  .step{
-    position: relative;
-    width: 306px;
-    border-radius: 12px;
+  span{
+    background: linear-gradient( #09ACF5 0%, #62DB54 50%);
+    background-clip: text;
+    color: transparent;
   }
 }
 
-.step-number{
+@media (min-width: 768px){
+  .intro-content{
+    background: #2D2D2D;
+    border: 1px solid #2D2D2D;
+
+    span{
+      color: #C1C1C1;
+    }
+
+    &:hover{
+      background-color: #202020;
+      border: 1px solid #62DB54;
+      border-radius: 12px;
+  
+      h3{
+        color: white;
+      }
+
+      span{
+        background: linear-gradient( #09ACF5 0%, #62DB54 50%);
+        background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}
+
+// 區塊標題(除了intro)
+.title{
+  text-align: center;
+  color: white;
+
+  &:after{
+    display: inline-block;
+    position: absolute;
+    content:"";
+    background-color: #62DB54;
+    width: 50px;
+    height: 3px;
+    left: 50%;
+    bottom: -16px;
+    transform: translate(-50%, -50%);
+  }
+}
+// 區塊標題(除了intro)END
+
+// 數字標籤
+.step{
+  position: relative;
+  border-radius: 12px;
+
+  &-number{
       position: absolute;
       left: 48px;
       top: -32px;
@@ -201,10 +243,12 @@ h1{
       font-weight: bold;
       color: #62DB54;
       background-color: #1C1C1C;
+      font-family: "Azeret Mono";
+  }
 }
+// 數字標籤END
 
 .lessonType{
-
   ul{
     overflow: auto;
     list-style:none;
@@ -218,7 +262,6 @@ h1{
   li{
     &:hover{
       background-color: #62DB54;
-      color: #2d2d2d;
     }
   }
 }
