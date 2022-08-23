@@ -18101,7 +18101,7 @@ h2, .h2 {
   color: transparent;
 }
 
-.b-gradient {
+.gradient-bg {
   background: -webkit-gradient(linear, left top, right top, from(#09ACF5), color-stop(50%, #62DB54));
   background: -o-linear-gradient(left, #09ACF5 0%, #62DB54 50%);
   background: linear-gradient(90deg, #09ACF5 0%, #62DB54 50%);
@@ -18317,21 +18317,17 @@ h1, .h1 {
   font-family: "Azeret Mono";
 }
 
-.lessonType ul {
-  overflow: auto;
-  list-style: none;
+.lessonTag a {
+  display: block;
 }
 
-.lessonType ul::-webkit-scrollbar {
-  display: none;
-}
-
-.lessonType li:hover {
+.lessonTag a:hover {
   background-color: #62DB54;
 }
 
 .hotLesson .card {
-  min-height: 564px;
+  border: 2px solid #2D2D2D;
+  border-radius: 24px;
 }
 
 .hotLesson .card:hover {
@@ -18348,23 +18344,21 @@ h1, .h1 {
   margin: 0 auto;
 }
 
-.lessonInfo h3, .lessonInfo .h3 {
-  position: relative;
+.hotLesson-btn {
+  display: block;
+  width: 172px;
+  margin: 0 auto;
+  color: white;
 }
 
-.lessonInfo h3:after, .lessonInfo .h3:after {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  background-color: #fff;
-  width: 50px;
-  height: 3px;
-  left: 0;
-  bottom: -16px;
+.hotLesson-btn:hover {
+  color: 202020;
+  background: -webkit-gradient(linear, right top, left top, from(#09ACF5), color-stop(50%, #62DB54));
+  background: -o-linear-gradient(right, #09ACF5 0%, #62DB54 50%);
+  background: linear-gradient(270deg, #09ACF5 0%, #62DB54 50%);
 }
 
 .lessonInfo-bg1, .lessonInfo-bg2, .lessonInfo-bg3, .lessonInfo-bg4 {
-  height: 615px;
   background-size: cover;
   background-position: center center;
 }
@@ -18385,34 +18379,80 @@ h1, .h1 {
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info04.jpg?raw=true);
 }
 
-.lessonInfo-bg-black {
+.lessonInfo-bg-mask {
   width: 100%;
   height: 100%;
   background-color: rgba(28, 28, 28, 0.9);
+  padding: 40px 72px;
 }
 
-.lessonInfo-bg-black span, .lessonInfo-bg-black p {
-  color: #C1C1C1;
+.lessonInfo-content {
+  text-align: center;
 }
 
-.lessonInfo-bg-black:hover {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.lessonInfo-bg-black:hover span {
+.lessonInfo-content .material-icons {
   color: #62DB54;
 }
 
-.lessonInfo-bg-black:hover p {
-  color: #fff;
-}
-
-.lessonInfo-bg-black:hover h3, .lessonInfo-bg-black:hover .h3 {
+.lessonInfo-content h3, .lessonInfo-content .h3 {
   position: relative;
 }
 
-.lessonInfo-bg-black:hover h3:after, .lessonInfo-bg-black:hover .h3:after {
+.lessonInfo-content h3:after, .lessonInfo-content .h3:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  width: 50px;
+  height: 3px;
   background-color: #62DB54;
+  left: 50%;
+  bottom: -16px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (min-width: 992px) {
+  .lessonInfo-bg-mask {
+    padding: 216px 48px;
+  }
+  .lessonInfo-bg-mask:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .lessonInfo-bg-mask:hover span {
+    color: #62DB54;
+  }
+  .lessonInfo-bg-mask:hover p {
+    color: #fff;
+  }
+  .lessonInfo-bg-mask:hover h3, .lessonInfo-bg-mask:hover .h3 {
+    position: relative;
+  }
+  .lessonInfo-bg-mask:hover h3:after, .lessonInfo-bg-mask:hover .h3:after {
+    background-color: #62DB54;
+  }
+  .lessonInfo-content {
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+  .lessonInfo-content h3, .lessonInfo-content .h3 {
+    position: relative;
+  }
+  .lessonInfo-content h3:after, .lessonInfo-content .h3:after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    width: 50px;
+    height: 3px;
+    background-color: #c1c1c1;
+    left: 25px;
+    bottom: -16px;
+  }
+  .lessonInfo-content .material-icons, .lessonInfo-content p {
+    color: #C1C1C1;
+  }
 }
 
 .articleIndex .col {
