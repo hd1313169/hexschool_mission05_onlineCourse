@@ -28,7 +28,7 @@ h2{
 }
 
 // 漸層背景
-.b-gradient{
+.gradient-bg{
   background: linear-gradient( 90deg, #09ACF5 0%, #62DB54 50%);
 }
 
@@ -248,29 +248,25 @@ h1{
 }
 // 數字標籤END
 
-.lessonType{
-  ul{
-    overflow: auto;
-    list-style:none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-  }
-
-  li{
+// 輪播標籤
+.lessonTag{
+  a{
+    display: block;
     &:hover{
       background-color: #62DB54;
     }
   }
 }
+// 輪播標籤END
 
 
+// 熱門課程
 .hotLesson{
   
+  // 卡片樣式
   .card{
-    min-height: 564px;
+    border: 2px solid #2D2D2D;
+    border-radius: 24px;
 
     &:hover{
       background-color: #1C1C1C;
@@ -285,30 +281,31 @@ h1{
     display: block;
     margin: 0 auto;
   }
-}
 
-.lessonInfo{
+  // 按鈕
+  &-btn{
+  display: block;
+  width: 172px;
+  margin: 0 auto;
+  color: white;
 
-  h3{
-    position: relative;
-    &:after{
-        display: inline-block;
-        position: absolute;
-        content:"";
-        background-color: #fff;
-        width: 50px;
-        height: 3px;
-        left: 0;
-        bottom: -16px;
-      }
-  
+    &:hover{
+      color: 202020;
+      background: linear-gradient( 270deg, #09ACF5 0%, #62DB54 50%);
     }
+  }
+}
+// 熱門課程END
+
+
+// 課程資訊
+  // 背景及遮罩
+.lessonInfo{
     &-bg1, &-bg2, &-bg3, &-bg4{
-      height: 615px;
+      // height: 615px;
       background-size: cover;
       background-position: center center;
     }
-
 
     &-bg1{
       background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info01.jpg?raw=true);
@@ -322,17 +319,45 @@ h1{
     &-bg4{
       background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/info04.jpg?raw=true);
     }
+
+    &-bg-mask{
+      width: 100%;
+      height: 100%;
+      background-color: rgba(28, 28, 28, 0.9);
+      padding: 40px 72px; 
+    }
+  
   }
   
-.lessonInfo-bg-black{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(28, 28, 28, 0.9);
+  // 內容文字
+.lessonInfo-content{
+  text-align: center;
 
-    span, p{
-      color: #C1C1C1;
-    }
+  .material-icons{
+    color: #62DB54;
+  }
 
+  h3{
+    position: relative;
+    &:after{
+        display: inline-block;
+        position: absolute;
+        content:"";
+        background-color: #fff;
+        width: 50px;
+        height: 3px;
+        background-color: #62DB54;
+        left: 50%;
+        bottom: -16px;
+        transform: translate(-50%, -50%);
+      }
+}
+}
+  // RWD
+@media (min-width: 992px){
+
+  .lessonInfo-bg-mask{
+    padding: 216px 48px;
 
     &:hover{
       background-color: rgba(0, 0, 0, 0);
@@ -349,16 +374,36 @@ h1{
         position: relative;
         &:after{
             background-color: #62DB54;
-          }
-      
+        }
       }
-    
     }
+  }
+
+  .lessonInfo-content{
+    text-align-last: left;
+
+    h3{
+      position: relative;
+      &:after{
+          display: inline-block;
+          position: absolute;
+          content:"";
+          background-color: #fff;
+          width: 50px;
+          height: 3px;
+          background-color: #c1c1c1;
+          left: 25px;
+          bottom: -16px;
+        }
+    }
+  
+    .material-icons, p{
+      color: #C1C1C1;
+    }
+  }
 }
 
-
-
-
+// 課程資訊END
 
 .articleIndex{
 
