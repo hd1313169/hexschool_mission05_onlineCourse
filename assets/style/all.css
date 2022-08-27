@@ -18112,6 +18112,14 @@ h2, .h2 {
   background: linear-gradient(90deg, #09ACF5 0%, #62DB54 50%);
 }
 
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
 h1, .h1 {
   background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a42e625b3e98d0fe8ffa5f9f58096fb8326aa845/week6-202207/logo2.svg);
   background-repeat: no-repeat;
@@ -18344,21 +18352,11 @@ h1, .h1 {
 
 .hotLesson .card {
   border: 2px solid #2D2D2D;
-  border-radius: 24px;
 }
 
 .hotLesson .card:hover {
   background-color: #1C1C1C;
   border: 2px solid #62DB54;
-  border-radius: 24px;
-}
-
-.hotLesson img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
 }
 
 .hotLesson-btn {
@@ -18593,7 +18591,7 @@ h1, .h1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 1px solid #7C7E77;
+  border: 1px solid #C1C1C1;
   border-radius: 24px;
   left: -10px;
   top: 10px;
@@ -18759,14 +18757,6 @@ h1, .h1 {
   border-radius: 24px;
 }
 
-.lessonList img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-}
-
 .lessonList-btn {
   padding: 8px 32px;
   color: white;
@@ -18805,6 +18795,38 @@ h1, .h1 {
   .lessonList .lessonList-btn {
     padding: 8px 48px;
   }
+}
+
+.classDetail-btn {
+  width: 32px;
+  height: 32px;
+}
+
+.classDetail-btn:hover {
+  color: 202020;
+  background: -webkit-gradient(linear, right top, left top, from(#09ACF5), color-stop(50%, #62DB54));
+  background: -o-linear-gradient(right, #09ACF5 0%, #62DB54 50%);
+  background: linear-gradient(270deg, #09ACF5 0%, #62DB54 50%);
+}
+
+.classDetail-btn span {
+  -webkit-transform: translate(20%, 20%);
+      -ms-transform: translate(20%, 20%);
+          transform: translate(20%, 20%);
+}
+
+.classDetail-item {
+  position: relative;
+}
+
+.classDetail-item::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #C1C1C1;
 }
 
 /*# sourceMappingURL=all.css.map */
