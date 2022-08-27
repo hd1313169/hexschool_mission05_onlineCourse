@@ -18132,6 +18132,17 @@ h1, .h1 {
   }
 }
 
+.footer {
+  padding: 16px 0;
+}
+
+@media (min-width: 992px) {
+  .footer {
+    padding: 24px 0;
+    font-size: 14px;
+  }
+}
+
 .navbar:before {
   content: "";
   display: block;
@@ -18502,138 +18513,6 @@ h1, .h1 {
   }
 }
 
-.review {
-  height: 733px;
-  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_share.jpg?raw=true);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.review h2, .review .h2 {
-  padding: 0 38px;
-}
-
-.review-swiper {
-  height: auto;
-}
-
-.review-swiper-img {
-  position: relative;
-  margin-left: 5px;
-  margin-bottom: 45px;
-}
-
-.review-swiper-img::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #7C7E77;
-  border-radius: 24px;
-  left: -5px;
-  top: 5px;
-  z-index: 0;
-}
-
-@media (min-width: 992px) {
-  .review-swiper-img::before {
-    left: -10px;
-    top: 10px;
-  }
-}
-
-.card {
-  padding: 24px 28px;
-  border-radius: 24px 24px 24px 0;
-  bottom: 0;
-  right: 0;
-  position: relative;
-}
-
-.card h3, .card .h3 {
-  margin-bottom: 8px;
-}
-
-.card-img {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  right: 32px;
-  bottom: 100%;
-  -webkit-transform: translateY(50%);
-      -ms-transform: translateY(50%);
-          transform: translateY(50%);
-}
-
-@media (max-width: 991px) {
-  .card-img {
-    width: 80px;
-    height: 80px;
-    right: 24px;
-    top: -30px;
-    bottom: auto;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
-  }
-}
-
-@media (max-width: 991px) {
-  .card {
-    width: 100%;
-    padding: 24px;
-    margin-bottom: 32px;
-  }
-}
-
-.review-swiper-button-next:after, .review-swiper-button-prev:after {
-  content: '';
-}
-
-.review-swiper-button-next, .review-swiper-button-prev {
-  position: unset;
-  width: 24px;
-  height: 24px;
-  margin-top: 0;
-  color: #62DB54;
-}
-
-.review-swiper .review-swiper-pagination {
-  position: unset;
-  width: auto;
-}
-
-.review-swiper .review-swiper-pagination .review-swiper-pagination-bullet {
-  background-color: #62DB54;
-  opacity: initial;
-}
-
-.review-swiper .review-swiper-pagination .review-swiper-pagination-bullet-active {
-  width: 16px;
-  border-radius: 100px;
-}
-
-.review-swiper-buttons {
-  bottom: 0;
-  left: 30%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 10;
-  position: absolute;
-}
-
-@media (max-width: 991px) {
-  .review-swiper-buttons {
-    position: initial;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
-  }
-}
-
 .joinUs {
   padding: 40px;
   text-align: center;
@@ -18679,14 +18558,178 @@ h1, .h1 {
   }
 }
 
-.footer {
-  padding: 16px 0;
+.review {
+  height: 733px;
+  padding: 80px 0;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_share.jpg?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-@media (min-width: 992px) {
-  .footer {
-    padding: 24px 0;
+.review-swiper {
+  width: 100%;
+  height: 429px;
+}
+
+@media (max-width: 991px) {
+  .swiper {
+    height: auto;
   }
+}
+
+.swiper-img {
+  top: 0;
+  left: 10px;
+  width: 60%;
+  height: 90%;
+  border-radius: 24px;
+  position: absolute;
+}
+
+.swiper-img::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #7C7E77;
+  border-radius: 24px;
+  left: -10px;
+  top: 10px;
+  z-index: -1;
+}
+
+@media (max-width: 991px) {
+  .swiper-img::after {
+    left: -5px;
+    top: 5px;
+  }
+}
+
+.swiper-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+}
+
+@media (max-width: 991px) {
+  .swiper-img {
+    position: relative;
+    width: calc(100% - 5px);
+    height: 213px;
+    left: 5px;
+    margin-bottom: 40px;
+  }
+}
+
+.swiper .card {
+  width: 45%;
+  padding: 32px;
+  border-radius: 24px 24px 24px 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.swiper .card h3, .swiper .card .h3 {
+  font-size: 18px;
+}
+
+.swiper .card-img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 32px;
+  bottom: 100%;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+@media (max-width: 991px) {
+  .swiper .card-img {
+    width: 80px;
+    height: 80px;
+    right: 24px;
+    top: -30px;
+    bottom: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .swiper .card {
+    position: relative;
+    width: 100%;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+.swiper .swiper-button-next:after, .swiper .swiper-button-prev:after {
+  content: '';
+}
+
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-top: 0;
+  color: #62DB54;
+}
+
+.swiper .swiper-pagination {
+  position: absolute;
+  width: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet {
+  background-color: #62DB54;
+  opacity: initial;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 16px;
+  border-radius: 100px;
+}
+
+.swiper-buttons {
+  bottom: 0;
+  left: 30%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 10;
+  position: absolute;
+}
+
+@media (max-width: 991px) {
+  .swiper-buttons {
+    position: initial;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+}
+
+.lessonType a {
+  display: block;
+}
+
+.lessonType a:hover {
+  background-color: #62DB54;
+  color: white;
+}
+
+.lessonType-active {
+  color: #62DB54;
 }
 
 /*# sourceMappingURL=all.css.map */
