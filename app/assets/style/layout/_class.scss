@@ -1,0 +1,13 @@
+.lessonType{
+    a{
+      display: block;
+      &:hover{
+        background-color: #62DB54;
+        color: white;
+      }
+    }
+
+    &-active{
+        color: #62DB54;
+    }
+  }
