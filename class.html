@@ -18,7 +18,6 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>    
     <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet"> 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   </head>
 
@@ -34,10 +33,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item me-12 fs-7">
-              <a class="nav-link active p-0" aria-current="page" href="#">首頁</a>
+              <a class="nav-link active p-0" aria-current="page" href="./class.html">首頁</a>
             </li>
             <li class="nav-item me-12 fs-7 p-0">
-              <a class="nav-link p-0" href="#">課程介紹</a>
+              <a class="nav-link p-0" href="./class.html">課程介紹</a>
             </li>
             <li class="nav-item fs-7 p-0">
               <a class="nav-link p-0" href="#"><span class="material-icons align-middle me-1">account_circle</span>登入</a>
@@ -47,59 +46,155 @@
       </div>
     </nav>
 
-    
-<!-- 課程標籤 -->
-<div class="bg-primary py-11">
-    <div class="container">
-    <div class="lessonType d-flex">
-        <div class="me-4 text-center"><a href="#" class="px-9 py-4 border border-secondary rounded-8 lessonType-active">所有課程</a></div>
-        <div class="me-4 text-center"><a href="#" class="text-light p-4 border rounded-8">行動應用開發</a></div>
-        <div class="me-4 text-center"><a href="#" class="text-light p-4 border rounded-8">資料庫/資料科學</a></div>
-        <div class="me-4 text-center"><a href="#" class="text-light p-4 border rounded-8">前端語言</a></div>
-        <div class="me-4 text-center"><a href="#" class="text-light p-4 border rounded-8">後端語言</a></div>
-        <div class="me-4 text-center"><a href="#" class="text-light p-4 border rounded-8">作業系統與伺服器</a></div>
-    </div>
-  </div>
-</div>
+    <div class="bg-dark py-11 lessonTag">
+<div class="container">
 
-<div class="bg-primary py-11 lessonTag">
-    <div class="container">
-    <div class="lessonType d-flex">
-  
-      <div class="swiper lessonTag-swiper">
+  <!-- 課程標籤 -->
+  <div class="lessonType">
+
+      <div class="lessonTypeSwiper lessonType-swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">JavaScript</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">HTML/CSS</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">SQL</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">Java</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">SQL</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">Bash/Shell</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">Python</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">Python</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">PHP</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">C++</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">JavaScript</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">HTML/CSS</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">SQL</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">Java</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">SQL</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">Bash/Shell</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">Python</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">Python</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">PHP</a></div>
-          <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">C++</a></div>
+          <div class="swiper-slide me-4 text-center"><a href="#" class="px-9 py-4 border border-secondary rounded-8 lessonType-active">所有課程</a></div>
+          <div class="swiper-slide me-4 text-center"><a href="#" class="text-light p-4 border rounded-8">行動應用開發</a></div>
+          <div class="swiper-slide me-4 text-center"><a href="#" class="text-light p-4 border rounded-8">資料庫/資料科學</a></div>
+          <div class="swiper-slide me-4 text-center"><a href="#" class="text-light p-4 border rounded-8">資料庫/資料科學</a></div>
+          <div class="swiper-slide me-4 text-center"><a href="#" class="text-light p-4 border rounded-8">後端語言</a></div>
+          <div class="swiper-slide me-4 text-center"><a href="#" class="text-light p-4 border rounded-8">作業系統與伺服器</a></div>
         </div>
       </div>
     </div>
-  </div>
   <!-- 課程標籤  END-->
+
+  <!-- 課程列表 -->
+    <div class="row text-light lessonList">
+
+      <!-- 課程01 -->
+        <div class="col-md-6 col-lg-12 mb-7 mb-lg-9">
+          <div class="card bg-primary">
+          <div class="card-body p-0">
+            <div class="lessonList-teacher">
+              <img src="./assets/images/teacher01.jpg" alt="teacher" class="mb-2">
+              <p class="text-center mb-7">Belinda</p>
+            </div>
+
+            <div class="lessonList-content">
+              <h5 class="card-title mb-1">基礎前端 - HTML</h5>
+              <a href="#" class="text-secondary mb-2">前端語言</a>
+              <p class="card-text mb-4">帶領無基礎的平民老百姓，從最基礎的HTML 語法出發，使用最淺顯易懂的語言與生活隨處可見的例子，輕鬆進入網頁架設的世界，完成一個基礎的網頁架設。</p>
+            </div>
+
+            <div class="lessonList-cta">
+              <p class="card-footer text-light text-center mb-4 pt-0">50分鐘 <span class="ms-2 ms-lg-0 fs-2 fw-bold">NT$1600</span></p>
+
+              <div class="d-flex justify-content-center flex-wrap">
+                <a class="lessonList-btn fs-7 btn border me-2 me-lg-0 mb-lg-2" href="#" role="button">課程介紹</a>
+                <a class="lessonList-btn fs-7 btn gradient-bg" href="#" role="button">立即預約</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div> 
+
+        <!-- 課程02 -->
+        <div class="col-md-6 col-lg-12 mb-7 mb-lg-9">
+          <div class="card bg-primary mb-24 mb-md-32">
+          <div class="card-body p-0">
+            <div class="lessonList-teacher">
+              <img src="./assets/images/teacher02.jpg" alt="teacher" class="mb-2">
+              <p class="text-center mb-7">Guava</p>
+            </div>
+
+            <div class="lessonList-content">
+              <h5 class="card-title mb-1">2022 Python 全攻略｜從入門到實務</h5>
+              <a href="#" class="text-secondary mb-2">後端語言</a>
+              <p class="card-text mb-4">Python支援多種程式設計範式，包括函數式、指令式、反射式、結構化和物件導向程式設計，它擁有動態型別系統和垃圾回收功能，能夠自動管理記憶體使用，本堂課帶你無痛入門，開發簡單的應用！</p>
+            </div>
+
+            <div class="lessonList-cta">
+              <p class="card-footer text-light text-center mb-4 pt-0">50分鐘 <span class="ms-2 ms-lg-0 fs-2 fw-bold">NT$2000</span></p>
+
+              <div class="d-flex justify-content-center flex-wrap">
+                <a class="lessonList-btn fs-7 btn border me-2 me-lg-0 mb-lg-2" href="#" role="button">課程介紹</a>
+                <a class="lessonList-btn fs-7 btn gradient-bg" href="#" role="button">立即預約</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div> 
+
+        <!-- 課程03 -->
+        <div class="col-md-6 col-lg-12 mb-7 mb-lg-9">
+          <div class="card bg-primary mb-24 mb-md-32">
+          <div class="card-body p-0">
+            <div class="lessonList-teacher">
+              <img src="./assets/images/teacher03.jpg" alt="teacher" class="mb-2">
+              <p class="text-center mb-7">Joe</p>
+            </div>
+
+            <div class="lessonList-content">
+              <h5 class="card-title mb-1">活用 Line Bot ｜APP 開發到上架完整實戰攻略</h5>
+              <a href="#" class="text-secondary mb-2">前端語言</a>
+              <p class="card-text mb-4">Line Bot 可用於實用的目的，如客戶服務或資訊獲取，有些聊天機器人會搭載自然語言處理系統，但大多簡單的系統只會擷取輸入的關鍵字，再從語料庫中找尋最合適的應答句，本堂課會帶你了解 Line Bot 如何結合其他工具的應用。</p>
+            </div>
+
+            <div class="lessonList-cta">
+              <p class="card-footer text-light text-center mb-4 pt-0">50分鐘 <span class="ms-2 ms-lg-0 fs-2 fw-bold">NT$1600</span></p>
+
+              <div class="d-flex justify-content-center flex-wrap">
+                <a class="lessonList-btn fs-7 btn border me-2 me-lg-0 mb-lg-2" href="#" role="button">課程介紹</a>
+                <a class="lessonList-btn fs-7 btn gradient-bg" href="#" role="button">立即預約</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+        <!-- 課程04 -->
+        <div class="col-md-6 col-lg-12 mb-7 mb-lg-9">
+          <div class="card bg-primary mb-24 mb-md-32">
+          <div class="card-body p-0">
+            <div class="lessonList-teacher">
+              <img src="./assets/images/teacher04.jpg" alt="teacher" class="mb-2">
+              <p class="text-center mb-7">Lina</p>
+            </div>
+
+            <div class="lessonList-content">
+              <h5 class="card-title mb-1">Linux 零基礎七天入門｜入門到實務</h5>
+              <a href="#" class="text-secondary mb-2">作業系統與伺服器</a>
+              <p class="card-text mb-4">課程會一步一步帶著你走，讓你能夠從頭開始學習程式語言的基本語法</p>
+            </div>
+
+            <div class="lessonList-cta">
+              <p class="card-footer text-light text-center mb-4 pt-0">50分鐘 <span class="ms-2 ms-lg-0 fs-2 fw-bold">NT$1100</span></p>
+
+              <div class="d-flex justify-content-center flex-wrap">
+                <a class="lessonList-btn fs-7 btn border me-2 me-lg-0 mb-lg-2" href="#" role="button">課程介紹</a>
+                <a class="lessonList-btn fs-7 btn gradient-bg" href="#" role="button">立即預約</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div> 
+
+
+
+
+    </div>
+    
+
+  </div>
+
+<!-- 課程列表 END-->
+</div>
+</div>
   
 
 
-    <footer class="footer bg-primary">
+    <footer class="footer bg-dark">
         <p class="font-azeret text-footer text-center m-0">Coding Home © 2022 All Rights Reserved</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

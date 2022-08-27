@@ -18,7 +18,6 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>    
     <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet"> 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   </head>
 
@@ -34,10 +33,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item me-12 fs-7">
-              <a class="nav-link active p-0" aria-current="page" href="#">首頁</a>
+              <a class="nav-link active p-0" aria-current="page" href="./class.html">首頁</a>
             </li>
             <li class="nav-item me-12 fs-7 p-0">
-              <a class="nav-link p-0" href="#">課程介紹</a>
+              <a class="nav-link p-0" href="./class.html">課程介紹</a>
             </li>
             <li class="nav-item fs-7 p-0">
               <a class="nav-link p-0" href="#"><span class="material-icons align-middle me-1">account_circle</span>登入</a>
@@ -157,7 +156,7 @@
   <div class="container-fluid text-light fw-bold">
     <h2 class="mb-14 title">你想要學習的程式，都在這裡</h2>
 
-    <div class="swiper lessonTag-swiper">
+    <div class="lessonTagSwiper lessonTag-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">JavaScript</a></div>
         <div class="swiper-slide me-2 text-center"><a href="#" class="text-light p-4 border rounded-8">HTML/CSS</a></div>
@@ -411,11 +410,11 @@
       <div class="col-md-8">
 
         <!-- Slider -->
-        <div class="swiper review-swiper position-relative">
-        <div class="swiper-wrapper">
+        <div class="reviewSwiper review-swiper position-relative">
+        <div class="review-swiper-wrapper">
             <!-- Slide 01 -->
-            <div class="swiper-slide position-relative">
-              <div class="swiper-img"><img src="./assets/images/share.jpg" alt="share" class="rounded-24"></div>
+            <div class="review-swiper-slide position-relative">
+              <div class="review-swiper-img"><img src="./assets/images/share.jpg" alt="share" class="rounded-24"></div>
               <div class="card">
                 <h3 class="fs-5">老師很有耐心</h3>
                 <p class="m-0">老師手把手的細心教學，用手繪圖，以淺顯易懂的方式，讓零網頁基礎的我也能快速了解網頁的架構與原理，學網頁變得有趣多了！</p>
@@ -424,8 +423,8 @@
             </div>
 
             <!-- Slide 02 -->
-            <div class="swiper-slide position-relative">
-              <div class="swiper-img"><img src="./assets/images/share.jpg" alt="share" class="rounded-24"></div>
+            <div class="review-swiper-slide position-relative">
+              <div class="review-swiper-img"><img src="./assets/images/share.jpg" alt="share" class="rounded-24"></div>
               <div class="card">
                 <h3 class="fs-5">老師很有耐心</h3>
                 <p class="m-0">老師手把手的細心教學，用手繪圖，以淺顯易懂的方式，讓零網頁基礎的我也能快速了解網頁的架構與原理，學網頁變得有趣多了！</p>
@@ -433,14 +432,24 @@
               </div>
             </div>
 
+            <!-- Slide 03 -->
+            <div class="review-swiper-slide position-relative">
+              <div class="review-swiper-img"><img src="./assets/images/share.jpg" alt="share" class="rounded-24"></div>
+              <div class="card">
+                <h3 class="fs-5">老師很有耐心</h3>
+                <p class="m-0">老師手把手的細心教學，用手繪圖，以淺顯易懂的方式，讓零網頁基礎的我也能快速了解網頁的架構與原理，學網頁變得有趣多了！</p>
+                <img src="./assets/images/student03.jpg" alt="student02" class="card-img">
+              </div>
+            </div>
+
         </div>
           <!--pagination -->
-          <div class="d-flex align-items-center justify-content-center swiper-buttons">
-            <span class="material-icons swiper-button-prev fs-md me-4 text-secondary">
+          <div class="d-flex align-items-center justify-content-center review-swiper-buttons">
+            <span class="material-icons review-swiper-button-prev fs-md me-4 text-secondary">
               west
             </span>
-            <div class="swiper-pagination d-flex"></div>
-            <span class="material-icons swiper-button-next fs-md ms-4 text-secondary">
+            <div class="review-swiper-pagination d-flex"></div>
+            <span class="material-icons review-swiper-button-next fs-md ms-4 text-secondary">
               east
             </span>
           </div>
@@ -478,10 +487,11 @@
 <!-- 加入我們 END-->
 
 
-    <footer class="footer bg-primary">
+    <footer class="footer bg-dark">
         <p class="font-azeret text-footer text-center m-0">Coding Home © 2022 All Rights Reserved</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendors.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>

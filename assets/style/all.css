@@ -18339,6 +18339,7 @@ h1, .h1 {
 
 .lessonTag a:hover {
   background-color: #62DB54;
+  color: white;
 }
 
 .hotLesson .card {
@@ -18573,12 +18574,12 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .swiper {
+  .review-swiper {
     height: auto;
   }
 }
 
-.swiper-img {
+.review-swiper-img {
   top: 0;
   left: 10px;
   width: 60%;
@@ -18587,7 +18588,7 @@ h1, .h1 {
   position: absolute;
 }
 
-.swiper-img::after {
+.review-swiper-img::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -18600,13 +18601,13 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .swiper-img::after {
+  .review-swiper-img::after {
     left: -5px;
     top: 5px;
   }
 }
 
-.swiper-img img {
+.review-swiper-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -18615,7 +18616,7 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .swiper-img {
+  .review-swiper-img {
     position: relative;
     width: calc(100% - 5px);
     height: 213px;
@@ -18624,7 +18625,7 @@ h1, .h1 {
   }
 }
 
-.swiper .card {
+.review-swiper .card {
   width: 45%;
   padding: 32px;
   border-radius: 24px 24px 24px 0;
@@ -18633,11 +18634,11 @@ h1, .h1 {
   position: absolute;
 }
 
-.swiper .card h3, .swiper .card .h3 {
+.review-swiper .card h3, .review-swiper .card .h3 {
   font-size: 18px;
 }
 
-.swiper .card-img {
+.review-swiper .card-img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -18650,7 +18651,7 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .swiper .card-img {
+  .review-swiper .card-img {
     width: 80px;
     height: 80px;
     right: 24px;
@@ -18663,7 +18664,7 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .swiper .card {
+  .review-swiper .card {
     position: relative;
     width: 100%;
     padding: 24px;
@@ -18671,36 +18672,36 @@ h1, .h1 {
   }
 }
 
-.swiper .swiper-button-next:after, .swiper .swiper-button-prev:after {
+.review-swiper .review-swiper-button-next:after, .review-swiper .review-swiper-button-prev:after {
   content: '';
 }
 
-.swiper-button-next, .swiper-button-prev {
-  position: absolute;
+.review-swiper-button-next, .review-swiper-button-prev {
+  position: unset;
   width: 24px;
   height: 24px;
   margin-top: 0;
   color: #62DB54;
 }
 
-.swiper .swiper-pagination {
-  position: absolute;
+.review-swiper-pagination {
+  position: unset;
   width: auto;
   top: 0;
   bottom: 0;
 }
 
-.swiper .swiper-pagination .swiper-pagination-bullet {
+.review-swiper-pagination .review-swiper-pagination-bullet {
   background-color: #62DB54;
   opacity: initial;
 }
 
-.swiper .swiper-pagination .swiper-pagination-bullet-active {
+.review-swiper-pagination .review-swiper-pagination-bullet-active {
   width: 16px;
   border-radius: 100px;
 }
 
-.swiper-buttons {
+.review-swiper-buttons {
   bottom: 0;
   left: 30%;
   -webkit-transform: translateX(-50%);
@@ -18711,12 +18712,20 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .swiper-buttons {
+  .review-swiper-buttons {
     position: initial;
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
   }
+}
+
+.lessonType {
+  margin-bottom: 24px;
+}
+
+.lessonType h5, .lessonType .h5 {
+  font-size: 20px;
 }
 
 .lessonType a {
@@ -18730,6 +18739,72 @@ h1, .h1 {
 
 .lessonType-active {
   color: #62DB54;
+}
+
+@media (min-width: 992px) {
+  .lessonType {
+    margin-bottom: 48px;
+  }
+}
+
+.lessonList .card {
+  border: 2px solid #2D2D2D;
+  border-radius: 24px;
+  padding: 32px 24px;
+}
+
+.lessonList .card:hover {
+  background-color: #1C1C1C;
+  border: 2px solid #62DB54;
+  border-radius: 24px;
+}
+
+.lessonList img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.lessonList-btn {
+  padding: 8px 32px;
+  color: white;
+}
+
+.lessonList-btn:hover {
+  color: 202020;
+  background: -webkit-gradient(linear, right top, left top, from(#09ACF5), color-stop(50%, #62DB54));
+  background: -o-linear-gradient(right, #09ACF5 0%, #62DB54 50%);
+  background: linear-gradient(270deg, #09ACF5 0%, #62DB54 50%);
+}
+
+@media (min-width: 992px) {
+  .lessonList .card {
+    padding: 48px;
+  }
+  .lessonList .card-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .lessonList .card h5, .lessonList .card .h5 {
+    font-size: 24px;
+  }
+  .lessonList .lessonList-content {
+    width: 576px;
+    margin-left: 48px;
+  }
+  .lessonList .lessonList-cta {
+    width: 200px;
+    margin-left: 88px;
+  }
+  .lessonList .lessonList-btn {
+    padding: 8px 48px;
+  }
 }
 
 /*# sourceMappingURL=all.css.map */
