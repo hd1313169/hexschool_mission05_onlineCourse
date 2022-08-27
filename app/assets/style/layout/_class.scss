@@ -1,4 +1,10 @@
 .lessonType{
+  margin-bottom: 24px;
+
+    h5{
+     font-size: 20px;
+    }
+
     a{
       display: block;
       &:hover{
@@ -6,8 +12,82 @@
         color: white;
       }
     }
-
+  
     &-active{
         color: #62DB54;
     }
+
+    @media (min-width: 992px) {
+      margin-bottom: 48px;
+    }
+
   }
+
+
+  // 課程列表
+.lessonList{
+  
+  // 卡片樣式
+  .card{
+    border: 2px solid #2D2D2D;
+    border-radius: 24px;
+    padding: 32px 24px;
+
+    &:hover{
+      background-color: #1C1C1C;
+      border: 2px solid #62DB54;
+      border-radius: 24px;
+    }
+  }
+  img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  // 按鈕
+  &-btn{
+  padding: 8px 32px;
+  color: white;
+
+    &:hover{
+      color: 202020;
+      background: linear-gradient( 270deg, #09ACF5 0%, #62DB54 50%);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .card{
+      padding: 48px;
+    
+        &-body{
+        display: flex;
+        justify-content: center;
+      }
+
+      h5{
+        font-size: 24px;
+      }
+    }
+  
+    .lessonList-content{
+        width: 576px;
+        margin-left: 48px;
+    }
+
+    .lessonList-cta{
+      width: 200px;
+      margin-left: 88px;
+    }
+
+    .lessonList-btn{
+      padding: 8px 48px;
+  }
+  
+}
+}
+
+
+// 課程列表 END
