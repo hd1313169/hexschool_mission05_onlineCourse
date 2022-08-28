@@ -71,4 +71,10 @@ var lessonTypeSwiper = new Swiper(".lessonType-swiper", {
     delay: 2000
   }
 });
+var elem = document.querySelector('input[name="datepicker"]');
+var datepicker = new Datepicker(elem, {
+  autohide: true,
+  language: 'zh-TW',
+  format: "yyyy/mm/dd"
+});
 //# sourceMappingURL=all.js.map
