@@ -44,11 +44,6 @@
   &-btn{
   padding: 8px 32px;
   color: white;
-
-    &:hover{
-      color: 202020;
-      background: linear-gradient( 270deg, #09ACF5 0%, #62DB54 50%);
-    }
   }
 
   @media (min-width: 992px) {

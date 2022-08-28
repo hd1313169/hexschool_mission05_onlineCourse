@@ -4,9 +4,9 @@ layout: ./app/layout.ejs
 engine: ejs
 current: class
 ---
-<div class="bg-primary">
+<div class="bg-black">
     
-<div class="py-7 pt-lg-7 pb-lg-4">
+<div class="py-7 pt-lg-7 pb-lg-4 timeline-bg">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-9 col-md-7 timeline">
@@ -31,6 +31,106 @@ current: class
       </div>
     </div>
   </div>
+
+  <div class="container">
+  <div class="row">
+
+  <div class="col-lg-4 ">
+  <div class="overlapCard">
+     <div class="card bg-primary rounded-0 p-7 px-lg-9 py-lg-12 text-white text-center ">
+      <div class="card-body p-0">
+          <img src="./assets/images/teacher01.jpg" alt="teacher" class="avatar avatar-border-secondary mb-4">
+          <h5 class="card-title fs-6 mb-2">基礎前端 - HTML</h5>
+          <a href="#" class="text-secondary mb-2 d-block">前端語言</a>
+          <p class="card-text m-0">帶領無基礎、文組生、對網頁設計有興趣的人，進入網站工程領域的基礎課，將從最基礎的HTML 語法出發。</p>
+      </div>
+    </div>
+    <div class="trangle"></div>
+  </div>
+  </div>
+
+  <div class="col-lg-8">
+
+    <div class="apply p-7 ps-lg-23 pe-lg-9 py-lg-12 bg-dark mt-lg-12 mb-11 mb-lg-24">
+
+      <h3 class="fs-4 text-center text-white mb-7 mb-lg-9">課程報名</h3>
+      
+      <h4 class="fs-7 text-white mb-4 apply-payment">選擇付款方式</h4>
+
+      <div class="btn-group flex-wrap mb-9" role="group" aria-label="Basic radio toggle button group">
+
+        <div class="me-2 mb-2 me-lg-4 apply-payment-item">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+          <label class="btn btn-outline-secondary p-4 px-lg-9 d-block rounded-8" for="btnradio1">信用卡付款</label>
+        </div>
+
+        <div class="mb-2 me-lg-4 apply-payment-item">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+          <label class="btn btn-outline-secondary p-4 px-lg-9 d-block rounded-8" for="btnradio2">超商繳款</label>
+        </div>
+
+        <div class="me-2 me-lg-4 apply-payment-item">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+          <label class="btn btn-outline-secondary p-4 px-lg-9 d-block rounded-8" for="btnradio3">ATM轉帳</label>
+        </div>
+
+        <div class="apply-payment-item">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+          <label class="btn btn-outline-secondary p-4 px-lg-9 d-block rounded-8" for="btnradio4">12期分期付款</label>
+        </div>
+
+      </div>
+
+      <h4 class="fs-7 text-white mb-4">訂單資訊</h4>
+      <form class="apply-form">
+        <div class="mb-4 apply-form-item-50 me-lg-12">
+          <label for="exampleInputName" class="form-label text-title">姓名</label>
+          <input type="text" class="form-control bg-dark border text-white" id="exampleInputName" aria-describedby="nameHelp" placeholder="請輸入姓名">
+        </div>
+
+        <div class="mb-4 apply-form-item-50">
+          <label for="exampleInputTel" class="form-label text-title">電話</label>
+          <input type="tel" class="form-control bg-dark border text-white" id="exampleInputTel" aria-describedby="telHelp" placeholder="請輸入電話號碼">
+        </div>
+
+        <div class="mb-4 apply-form-item-100">
+          <label for="exampleInputEmail1" class="form-label text-title">信箱</label>
+          <input type="email" class="form-control bg-dark border text-white" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="請輸入信箱">
+        </div>
+
+        <div class="mb-4 apply-form-item-50 me-lg-12">
+          <label for="exampleInputLesson" class="form-label text-title">課程</label>
+          <select class="form-select bg-dark border text-footer" aria-label="Default select example">
+            <option value="1">1堂50分鐘</option>
+            <option value="2">3堂50分鐘</option>
+            <option selected>10堂50分鐘</option>
+            <option value="3">20堂50分鐘</option>
+            <option value="4">客製化課程/專案製作</option>
+          </select>
+        </div>
+
+        <div class="mb-4 apply-form-item-50">
+          <label for="exampleInputDate" class="form-label text-title">想預約的日期</label>
+          <input type="text" placeholder="請選擇日期" name="datepicker" class="form-control bg-dark border text-white">
+        </div>
+
+        <div class="mb-7 apply-form-item-100">
+          <label for="exampleInputEmail1" class="form-label text-title">上課地點</label>
+          <input type="text" class="form-control bg-dark border text-white" id="exampleInputName" aria-describedby="nameHelp" placeholder="請輸入上課地點">
+        </div>
+
+        <div class="apply-form-btn">
+          <h4 class="fs-7 text-white mb-4">NT$1600</h4>
+          <a class="btn btn-primary d-block gradient-bg px-3 py-2 rounded-8" href="./checkout-payment.html">前往結賬</a>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+  </div>
+  </div>
+
 
 
 </div>

@@ -78,3 +78,10 @@ autoplay: {
   delay: 2000,
 },
 });
+
+const elem = document.querySelector('input[name="datepicker"]');
+const datepicker = new Datepicker(elem, {
+  autohide: true,
+  language: 'zh-TW',
+  format: "yyyy/mm/dd",
+}); 

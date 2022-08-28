@@ -33,6 +33,10 @@ h2{
 // 漸層背景
 .gradient-bg{
   background: linear-gradient( 90deg, #09ACF5 0%, #62DB54 50%);
+
+  &:hover{
+    background: linear-gradient( 270deg, #09ACF5 0%, #62DB54 50%);
+  }
 }
 
 // 大頭貼
@@ -42,6 +46,10 @@ h2{
   border-radius: 50%;
   display: block;
   margin: 0 auto;
+
+  &-border-secondary{
+    border: 3px solid #62DB54;
+  }
 }
 
 // 商標
@@ -303,11 +311,6 @@ h1{
   width: 172px;
   margin: 0 auto;
   color: white;
-
-    &:hover{
-      color: 202020;
-      background: linear-gradient( 270deg, #09ACF5 0%, #62DB54 50%);
-    }
   }
 }
 // 熱門課程END
@@ -645,12 +648,6 @@ h1{
   }
 
 // 學生評價END
-
-.login-btn{
-  &:hover{
-    background: linear-gradient( 270deg, #09ACF5 0%, #62DB54 50%);
-  }
-}
 .login-other-title{
   position: relative;
 
@@ -675,7 +672,6 @@ h1{
 }
 
 .login-other-btn{
-
   &:hover{
       background-color: #62DB54;
   }

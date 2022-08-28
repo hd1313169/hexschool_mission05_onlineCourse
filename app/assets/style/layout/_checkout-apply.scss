@@ -1,0 +1,143 @@
+.timeline {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 9px;
+      left: 0;  
+      right: 0;
+      height: 2px;
+      background-color: #C1C1C1;
+    }
+    &-pointer {
+      position: relative;
+      color: #C1C1C1;
+      p {
+        padding-top: 24px;
+        margin-bottom: 0;
+        line-height: 1.5;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        border: 1px solid #C1C1C1;
+        border-radius: 50%;
+        background-color: #2D2D2D;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        z-index: 1;
+      }
+      &.step-1::before {
+        content: '1';
+      }
+      &.step-2::before {
+        content: '2';
+      }
+      &.step-3::before {
+        content: '3';
+      }
+    }
+    &-active {
+        color: #62DB54;
+        &::before{
+            content: "✓" !important;
+            color: #FFFFFF;  
+            background-color: #62DB54;
+            border-color: #62DB54;
+        }
+      }
+  }
+
+  @media (min-width: 992px){
+    .timeline-bg{
+      background-color: #2D2D2D;
+    }
+  }
+
+.overlapCard{
+  @media (min-width: 992px){
+    display: flex;
+    align-items: center;
+    width: 33.33%;
+    // margin-top: 265px;
+    margin-top: 64px;
+    margin-right: -72px;
+    z-index: 1;
+    position: fixed;
+  }
+}
+  .trangle{
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    border-style: solid;
+    border-width: 12px 12px 0 12px;
+    border-color: #2D2D2D transparent transparent transparent;
+
+    @media (min-width: 992px){
+      border-width: 12px 0px 12px 12px;
+      border-color: transparent transparent transparent #2D2D2D;
+      margin: 0;
+      z-index: 1;
+    }
+  }
+
+.apply{
+
+  h4{
+    text-align: center;
+  
+    @media (min-width: 992px){
+      text-align-last: left;
+    }
+  }
+}
+.apply-payment-item{
+
+  width: calc(50% - 8px);
+
+  @media (min-width: 992px){
+
+    width: auto;
+  }
+}
+
+.apply-form{
+
+  &-btn{
+    a{
+      width: 100%;
+    }
+  }
+  @media (min-width: 992px){
+
+    display: flex;
+    flex-wrap: wrap;
+    &-item-50{
+      width: calc(50% - 24px);
+    }
+
+    &-item-100{
+      width: 100%;
+    }
+
+    &-btn{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a{
+        width: 23.7%;
+      }
+    }
+  }
+
+}
