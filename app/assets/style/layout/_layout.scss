@@ -1,0 +1,88 @@
+
+// 商標
+h1{
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a42e625b3e98d0fe8ffa5f9f58096fb8326aa845/week6-202207/logo2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 24px;
+  height: 24px;
+  text-indent: 101%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@media (min-width: 768px){
+  h1{
+    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a42e625b3e98d0fe8ffa5f9f58096fb8326aa845/week6-202207/logo.svg);
+    width: 180px;
+    height: 42px;
+  }
+}
+// 商標END
+
+
+// 導覽列下面那條線
+.navbar:before{
+  content:"";
+  display: block;
+  position: absolute;
+  background-color: #62DB54;
+  width: 50%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+}
+.navbar:after{
+  content:"";
+  display: block;
+  position: absolute;
+  background-color: #09ACF5;
+  width: 50%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+}
+// 導覽列下面那條線END
+
+// 頁尾
+.footer{
+  padding: 16px 0;
+
+  @media (min-width: 992px){
+    padding: 24px 0;
+    font-size: 14px;
+  }
+}
+// 頁尾END
+
+
+// 登入
+.login-other-title{
+  position: relative;
+
+  &::before{
+      position: absolute;
+      left: 0;
+      bottom: 50%;
+      content: "";
+      width: 30%;
+      height: 1px;
+      background-color: white;
+  }
+  &::after{
+      position: absolute;
+      right: 0;
+      bottom: 50%;
+      content: "";
+      width: 30%;
+      height: 1px;
+      background-color: white;
+  }
+}
+
+.login-other-btn{
+  &:hover{
+      background-color: #62DB54;
+  }
+}

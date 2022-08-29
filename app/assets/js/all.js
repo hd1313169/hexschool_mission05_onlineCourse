@@ -68,22 +68,14 @@ const datepicker = new Datepicker(elem, {
 }); 
 
 
-// Swiper
 const mySwiper = new Swiper('.mySwiper', {
-  // Optional parameters
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  
-  // If we need pagination
+  spaceBetween: 24,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
-
-  // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".pagination-arrow-next",
+    prevEl: ".pagination-arrow-prev",
   },
 });

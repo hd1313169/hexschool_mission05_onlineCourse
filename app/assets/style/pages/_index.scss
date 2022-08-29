@@ -1,114 +1,3 @@
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.font-azeret{
-  font-family: "Azeret Mono";
-}
-
-h2{
-  color: white;
-  position: relative;
-}
-
-// 圓角矩形
-.rounded-8{
-  border-radius: 8px;
-}
-.rounded-12{
-  border-radius: 12px;
-}
-.rounded-24{
-  border-radius: 24px;
-}
-
-// 漸層字
-.gradient-text{
-  background-image: linear-gradient(180deg, #62DB54, #09ACF5);
-  background-clip: text;
-  color: transparent;
-}
-
-// 漸層背景
-.gradient-bg{
-  background: linear-gradient( 90deg, #09ACF5 0%, #62DB54 50%);
-
-  &:hover{
-    background: linear-gradient( 270deg, #09ACF5 0%, #62DB54 50%);
-  }
-}
-
-// 大頭貼
-.avatar{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-
-  &-border-secondary{
-    border: 3px solid #62DB54;
-  }
-}
-
-// 商標
-h1{
-  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a42e625b3e98d0fe8ffa5f9f58096fb8326aa845/week6-202207/logo2.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 24px;
-  height: 24px;
-  text-indent: 101%;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-@media (min-width: 768px){
-  h1{
-    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a42e625b3e98d0fe8ffa5f9f58096fb8326aa845/week6-202207/logo.svg);
-    width: 180px;
-    height: 42px;
-  }
-}
-// 商標END
-
-// 頁尾
-.footer{
-  padding: 16px 0;
-
-  @media (min-width: 992px){
-    padding: 24px 0;
-    font-size: 14px;
-  }
-}
-// 頁尾END
-
-
-// 導覽列下面那條線
-.navbar:before{
-  content:"";
-  display: block;
-  position: absolute;
-  background-color: #62DB54;
-  width: 50%;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-}
-.navbar:after{
-  content:"";
-  display: block;
-  position: absolute;
-  background-color: #09ACF5;
-  width: 50%;
-  height: 2px;
-  right: 0;
-  bottom: 0;
-}
-// 導覽列下面那條線END
-
 // 橫幅廣告
   // 背景圖片
 .banner-bg{
@@ -239,25 +128,6 @@ h1{
     }
   }
 }
-
-// 區塊標題(除了intro)
-.title{
-  text-align: center;
-  color: white;
-
-  &:after{
-    display: inline-block;
-    position: absolute;
-    content:"";
-    background-color: #62DB54;
-    width: 50px;
-    height: 3px;
-    left: 50%;
-    bottom: -16px;
-    transform: translate(-50%, -50%);
-  }
-}
-// 區塊標題(除了intro)END
 
 // 數字標籤
 .step{
@@ -477,6 +347,7 @@ h1{
 .joinUs{
   padding: 40px;
   text-align: center;
+  max-width: 996px;
 
   a{
     color: white;
@@ -517,36 +388,34 @@ h1{
 
 
 // 學生評價
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .feedback {
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_share.jpg?raw=true);
   height: 733px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 80px 0;
-  @media (max-width:991px) {
-    height: auto;
+  padding: 40px 0;
+  @media (min-width:992px) {
+    padding: 80px 0;
   }
 }
 
 .swiper {
   width: 100%;
-  height: 429px;
-  @media (max-width:991px) {
-    height: auto;
+  height: 100%;
+
+  @media (min-width:992px) {
+    height: 429px;
   }
+
   &-img {
-    top: 0;
-    left: 10px;
-    width: 60%;
-    height: 90%;
+    position: relative;
+    width: calc(100% - 5px);
+    left: 5px;
+    height: 213px;
     border-radius: 24px;
-    position: absolute;
+    margin-bottom: 40px;
+
     &::after {
       content: '';
       position: absolute;
@@ -554,12 +423,12 @@ img {
       height: 100%;
       border: 1px solid #7C7E77;
       border-radius: 24px;
-      left: -10px;
-      top: 10px;
+      left: -5px;
+      top: 5px;
       z-index: -1;
-      @media (max-width:991px) {
-        left: -5px;
-        top: 5px;
+      @media (min-width:992px) {
+        left: -10px;
+        top: 10px;
       }
     }
     img {
@@ -568,12 +437,12 @@ img {
       object-fit: cover;
       border-radius: 24px;
     }
-    @media (max-width:991px) {
-      position: relative;
-      width: calc(100% - 5px);
-      height: 213px;
-      left: 5px;
-      margin-bottom: 40px;
+    @media (min-width:992px) {
+      position: absolute;
+      width: 60%;
+      height: 90%;
+      top: 0;
+      left: 10px;
     }
   }
   .card {
@@ -649,31 +518,113 @@ img {
   }
 }
 // 學生評價END
-.login-other-title{
-  position: relative;
 
-  &::before{
-      position: absolute;
-      left: 0;
-      bottom: 50%;
-      content: "";
-      width: 30%;
-      height: 1px;
-      background-color: white;
-  }
-  &::after{
-      position: absolute;
-      right: 0;
-      bottom: 50%;
-      content: "";
-      width: 30%;
-      height: 1px;
-      background-color: white;
+
+// 借用
+.comment{
+  @media (max-width: 991px) {
+    background-image: url('../images/bg_share.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
-.login-other-btn{
-  &:hover{
-      background-color: #62DB54;
+.comment-item{
+  position: relative;
+  @media (max-width: 991px) {
+    max-width: 925px;
+    margin: 0 auto;
   }
+}
+
+.comment-image{
+  transform-style: preserve-3d;
+  margin-bottom: 263px;
+  @media (max-width: 991px) {
+    max-width: 525px;
+    margin-bottom: 24px;
+  }
+  &::before{
+    content:'';
+    position: absolute;
+    display: block;
+    top:5px;
+    right:5px;
+    border: 1px solid #7C7E77;
+    border-radius: 24px;
+    width: 98%;
+    height: 248px;
+    transform: translateZ(-5px);
+    @media (max-width: 991px) {
+      height: 375px;
+    }
+  }
+  img{
+    width: 98%;
+  }
+}
+
+.comment-info-wrapper{
+  position: absolute;
+  border-radius: 24px 24px 24px 0;
+  bottom: 60px;
+  @media (max-width: 991px) {
+    max-width: 416px;
+    bottom: 0px;
+    right: 0px
+  }
+}
+
+.comment-info-pic{
+  position: relative;
+  width: 80px;
+  @media (max-width: 991px) {
+    width: 100px;
+  }
+  img{
+    position: absolute;
+    border-radius: 48px;
+    top:-40px;
+    right: 24px;
+    @media (max-width: 991px) {
+      top: -50px;
+      right: 32px;
+    }
+  }
+}
+
+.comment-info-text{
+  padding: 24px;
+}
+
+.comment-text{
+  text-align: justify;
+}
+
+.pagination-item{
+  @media (max-width: 991px) {
+    max-width: 525px;
+  }
+}
+
+.swiper-pagination.swiper-pagination-bullets{
+  position:inherit;
+  width:auto;
+}
+
+.swiper-pagination-bullet{
+  background:$primary;
+  &-active{
+    background:$primary;
+    width: 16px;
+    border-radius: 4px;
+    opacity: 1;
+  }
+}
+
+.pagination-arrow-prev, .pagination-arrow-next{
+  font-size: 24px;
+  line-height: 16px;
+  cursor:pointer;
 }
