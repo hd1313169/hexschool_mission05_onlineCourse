@@ -31,25 +31,6 @@ var lessonTagSwiper = new Swiper(".lessonTag-swiper", {
   },
 });
 
-const reviewSwiper = new Swiper('.review-swiper', {
-  // Optional parameters
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  
-  // If we need pagination
-  pagination: {
-    el: '.review-swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.review-swiper-button-next',
-    prevEl: '.review-swiper-button-prev',
-  },
-});
-
 var lessonTypeSwiper = new Swiper(".lessonType-swiper", {
   // Default parameters
   slidesPerView: 2,
@@ -85,3 +66,24 @@ const datepicker = new Datepicker(elem, {
   language: 'zh-TW',
   format: "yyyy/mm/dd",
 }); 
+
+
+// Swiper
+const mySwiper = new Swiper('.mySwiper', {
+  // Optional parameters
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
