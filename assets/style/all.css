@@ -19279,27 +19279,38 @@ h1, .h1 {
   }
 }
 
-.review {
-  height: 733px;
-  padding: 80px 0;
-  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_share.jpg?raw=true);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.review-swiper {
+.feedback {
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_share.jpg?raw=true);
+  height: 733px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+@media (max-width: 991px) {
+  .feedback {
+    height: auto;
+  }
+}
+
+.swiper {
   width: 100%;
   height: 429px;
 }
 
 @media (max-width: 991px) {
-  .review-swiper {
+  .swiper {
     height: auto;
   }
 }
 
-.review-swiper-img {
+.swiper-img {
   top: 0;
   left: 10px;
   width: 60%;
@@ -19308,12 +19319,12 @@ h1, .h1 {
   position: absolute;
 }
 
-.review-swiper-img::after {
+.swiper-img::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #7C7E77;
   border-radius: 24px;
   left: -10px;
   top: 10px;
@@ -19321,13 +19332,13 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .review-swiper-img::after {
+  .swiper-img::after {
     left: -5px;
     top: 5px;
   }
 }
 
-.review-swiper-img img {
+.swiper-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -19336,7 +19347,7 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .review-swiper-img {
+  .swiper-img {
     position: relative;
     width: calc(100% - 5px);
     height: 213px;
@@ -19345,7 +19356,7 @@ h1, .h1 {
   }
 }
 
-.review-swiper .card {
+.swiper .card {
   width: 45%;
   padding: 32px;
   border-radius: 24px 24px 24px 0;
@@ -19354,11 +19365,11 @@ h1, .h1 {
   position: absolute;
 }
 
-.review-swiper .card h3, .review-swiper .card .h3 {
+.swiper .card h3, .swiper .card .h3 {
   font-size: 18px;
 }
 
-.review-swiper .card-img {
+.swiper .card-img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -19371,7 +19382,7 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .review-swiper .card-img {
+  .swiper .card-img {
     width: 80px;
     height: 80px;
     right: 24px;
@@ -19384,7 +19395,7 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .review-swiper .card {
+  .swiper .card {
     position: relative;
     width: 100%;
     padding: 24px;
@@ -19392,11 +19403,11 @@ h1, .h1 {
   }
 }
 
-.review-swiper .review-swiper-button-next:after, .review-swiper .review-swiper-button-prev:after {
+.swiper .swiper-button-next:after, .swiper .swiper-button-prev:after {
   content: '';
 }
 
-.review-swiper-button-next, .review-swiper-button-prev {
+.swiper-button-next, .swiper-button-prev {
   position: unset;
   width: 24px;
   height: 24px;
@@ -19404,24 +19415,22 @@ h1, .h1 {
   color: #62DB54;
 }
 
-.review-swiper-pagination {
+.swiper .swiper-pagination {
   position: unset;
   width: auto;
-  top: 0;
-  bottom: 0;
 }
 
-.review-swiper-pagination .review-swiper-pagination-bullet {
+.swiper .swiper-pagination .swiper-pagination-bullet {
   background-color: #62DB54;
   opacity: initial;
 }
 
-.review-swiper-pagination .review-swiper-pagination-bullet-active {
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
   width: 16px;
   border-radius: 100px;
 }
 
-.review-swiper-buttons {
+.swiper-buttons {
   bottom: 0;
   left: 30%;
   -webkit-transform: translateX(-50%);
@@ -19432,7 +19441,7 @@ h1, .h1 {
 }
 
 @media (max-width: 991px) {
-  .review-swiper-buttons {
+  .swiper-buttons {
     position: initial;
     -webkit-transform: none;
         -ms-transform: none;
