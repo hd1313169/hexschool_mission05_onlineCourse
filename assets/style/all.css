@@ -18849,6 +18849,25 @@ h2, .h2 {
   border: 3px solid #62DB54;
 }
 
+.title {
+  text-align: center;
+  color: white;
+}
+
+.title:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  background-color: #62DB54;
+  width: 50px;
+  height: 3px;
+  left: 50%;
+  bottom: -16px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 h1, .h1 {
   background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a42e625b3e98d0fe8ffa5f9f58096fb8326aa845/week6-202207/logo2.svg);
   background-repeat: no-repeat;
@@ -18866,17 +18885,6 @@ h1, .h1 {
     background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/a42e625b3e98d0fe8ffa5f9f58096fb8326aa845/week6-202207/logo.svg);
     width: 180px;
     height: 42px;
-  }
-}
-
-.footer {
-  padding: 16px 0;
-}
-
-@media (min-width: 992px) {
-  .footer {
-    padding: 24px 0;
-    font-size: 14px;
   }
 }
 
@@ -18900,6 +18908,45 @@ h1, .h1 {
   height: 2px;
   right: 0;
   bottom: 0;
+}
+
+.footer {
+  padding: 16px 0;
+}
+
+@media (min-width: 992px) {
+  .footer {
+    padding: 24px 0;
+    font-size: 14px;
+  }
+}
+
+.login-other-title {
+  position: relative;
+}
+
+.login-other-title::before {
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: white;
+}
+
+.login-other-title::after {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  content: "";
+  width: 30%;
+  height: 1px;
+  background-color: white;
+}
+
+.login-other-btn:hover {
+  background-color: #62DB54;
 }
 
 .banner-bg {
@@ -19031,25 +19078,6 @@ h1, .h1 {
             background-clip: text;
     color: transparent;
   }
-}
-
-.title {
-  text-align: center;
-  color: white;
-}
-
-.title:after {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  background-color: #62DB54;
-  width: 50px;
-  height: 3px;
-  left: 50%;
-  bottom: -16px;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .step {
@@ -19237,6 +19265,7 @@ h1, .h1 {
 .joinUs {
   padding: 40px;
   text-align: center;
+  max-width: 996px;
 }
 
 .joinUs a {
@@ -19279,44 +19308,39 @@ h1, .h1 {
   }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .feedback {
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week6-202207/bg_share.jpg?raw=true);
   height: 733px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 992px) {
   .feedback {
-    height: auto;
+    padding: 80px 0;
   }
 }
 
 .swiper {
   width: 100%;
-  height: 429px;
+  height: 100%;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 992px) {
   .swiper {
-    height: auto;
+    height: 429px;
   }
 }
 
 .swiper-img {
-  top: 0;
-  left: 10px;
-  width: 60%;
-  height: 90%;
+  position: relative;
+  width: calc(100% - 5px);
+  left: 5px;
+  height: 213px;
   border-radius: 24px;
-  position: absolute;
+  margin-bottom: 40px;
 }
 
 .swiper-img::after {
@@ -19326,15 +19350,15 @@ img {
   height: 100%;
   border: 1px solid #7C7E77;
   border-radius: 24px;
-  left: -10px;
-  top: 10px;
+  left: -5px;
+  top: 5px;
   z-index: -1;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 992px) {
   .swiper-img::after {
-    left: -5px;
-    top: 5px;
+    left: -10px;
+    top: 10px;
   }
 }
 
@@ -19346,13 +19370,13 @@ img {
   border-radius: 24px;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 992px) {
   .swiper-img {
-    position: relative;
-    width: calc(100% - 5px);
-    height: 213px;
-    left: 5px;
-    margin-bottom: 40px;
+    position: absolute;
+    width: 60%;
+    height: 90%;
+    top: 0;
+    left: 10px;
   }
 }
 
@@ -19449,32 +19473,136 @@ img {
   }
 }
 
-.login-other-title {
+@media (max-width: 991px) {
+  .comment {
+    background-image: url("../images/bg_share.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.comment-item {
   position: relative;
 }
 
-.login-other-title::before {
-  position: absolute;
-  left: 0;
-  bottom: 50%;
-  content: "";
-  width: 30%;
-  height: 1px;
-  background-color: white;
+@media (max-width: 991px) {
+  .comment-item {
+    max-width: 925px;
+    margin: 0 auto;
+  }
 }
 
-.login-other-title::after {
-  position: absolute;
-  right: 0;
-  bottom: 50%;
-  content: "";
-  width: 30%;
-  height: 1px;
-  background-color: white;
+.comment-image {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  margin-bottom: 263px;
 }
 
-.login-other-btn:hover {
-  background-color: #62DB54;
+@media (max-width: 991px) {
+  .comment-image {
+    max-width: 525px;
+    margin-bottom: 24px;
+  }
+}
+
+.comment-image::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 5px;
+  border: 1px solid #7C7E77;
+  border-radius: 24px;
+  width: 98%;
+  height: 248px;
+  -webkit-transform: translateZ(-5px);
+          transform: translateZ(-5px);
+}
+
+@media (max-width: 991px) {
+  .comment-image::before {
+    height: 375px;
+  }
+}
+
+.comment-image img {
+  width: 98%;
+}
+
+.comment-info-wrapper {
+  position: absolute;
+  border-radius: 24px 24px 24px 0;
+  bottom: 60px;
+}
+
+@media (max-width: 991px) {
+  .comment-info-wrapper {
+    max-width: 416px;
+    bottom: 0px;
+    right: 0px;
+  }
+}
+
+.comment-info-pic {
+  position: relative;
+  width: 80px;
+}
+
+@media (max-width: 991px) {
+  .comment-info-pic {
+    width: 100px;
+  }
+}
+
+.comment-info-pic img {
+  position: absolute;
+  border-radius: 48px;
+  top: -40px;
+  right: 24px;
+}
+
+@media (max-width: 991px) {
+  .comment-info-pic img {
+    top: -50px;
+    right: 32px;
+  }
+}
+
+.comment-info-text {
+  padding: 24px;
+}
+
+.comment-text {
+  text-align: justify;
+}
+
+@media (max-width: 991px) {
+  .pagination-item {
+    max-width: 525px;
+  }
+}
+
+.swiper-pagination.swiper-pagination-bullets {
+  position: inherit;
+  width: auto;
+}
+
+.swiper-pagination-bullet {
+  background: #2D2D2D;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2D2D2D;
+  width: 16px;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.pagination-arrow-prev, .pagination-arrow-next {
+  font-size: 24px;
+  line-height: 16px;
+  cursor: pointer;
 }
 
 .lessonType {
