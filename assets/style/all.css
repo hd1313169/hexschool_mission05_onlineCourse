@@ -19098,6 +19098,10 @@ h1, .h1 {
   font-family: "Azeret Mono";
 }
 
+.lessonTag {
+  overflow: hidden;
+}
+
 .lessonTag a {
   display: block;
 }
