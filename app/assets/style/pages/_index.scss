@@ -151,6 +151,7 @@
 
 // 輪播標籤
 .lessonTag{
+  overflow: hidden;
   a{
     display: block;
     &:hover{
